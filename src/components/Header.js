@@ -1,6 +1,7 @@
 import '../App.css';
 import profil from '../img/Profil.png';
 import ajouter from '../img/Ajouter.png';
+
 function Header() {
   return (
     <header>
@@ -14,6 +15,10 @@ function Header() {
           </a>
         </div>
       </nav>
+      <div>
+          <h1> TOTAL :</h1>
+          <h2></h2>
+        </div>
     </header>
   );
 };

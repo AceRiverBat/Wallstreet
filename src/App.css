@@ -4,6 +4,22 @@
 .App-icon{
   height: 5rem;
 }
+
+.bg-light{
+  background-color: #72a0e0!important;
+}
+header{
+  background-color: #72a0e0!important;
+  padding: 1rem;
+}
+
+h1{
+  text-align: center;
+}
+h2{
+  text-align: center;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
