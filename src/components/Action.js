@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 
-export default function Calculatrice({ initialCalcul }, { initialNombre}) {
+export default function Action({ initialCalcul }, { initialNombre}) {
     const [calcul, setCalcul] = useState(initialCalcul);
     let nombre= useState(localStorage.getItem('montant'));
     let [resultat, setResultat] = useState(0);
