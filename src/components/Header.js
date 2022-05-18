@@ -1,5 +1,6 @@
 import '../App.css';
 import ajouter from '../img/Ajouter.png';
+import { useHistory } from 'react-router-dom';
 
 function Header() {
   return (
@@ -7,7 +8,7 @@ function Header() {
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container-fluid">
           <h4>Bonjour <strong>{localStorage.getItem('user')}</strong> </h4>
-          <a className="navbar-brand" href="#">
+          <a className="navbar-brand" href='#'>
             <img src={ajouter} className="App-icon" alt="Ajouter" />
           </a>
         </div>
