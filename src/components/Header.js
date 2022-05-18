@@ -14,7 +14,7 @@ function Header() {
       </nav>
       <div>
         <h1> TOTAL :</h1>
-        <h2></h2>
+        <h2> <strong>{localStorage.getItem('montant')}</strong> </h2>
       </div>
       <div className="center-items">
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
