@@ -1,6 +1,6 @@
 import '../App.css';
 import ajouter from '../img/Ajouter.png';
-import { useHistory } from 'react-router-dom';
+import { Outlet, Link } from "react-router-dom";
 
 function Header() {
   return (
@@ -8,14 +8,12 @@ function Header() {
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container-fluid">
           <h4>Bonjour <strong>{localStorage.getItem('user')}</strong> </h4>
-          <a className="navbar-brand" href='#'>
-            <img src={ajouter} className="App-icon" alt="Ajouter" />
-          </a>
+          <Link className="nav-link" to="/Ajouter"><img src={ajouter} className="App-icon" alt="Ajouter" /></Link>
         </div>
       </nav>
       <div>
         <h1> TOTAL :</h1>
-        <h2> <strong>{localStorage.getItem('montant')}</strong> </h2>
+        <h2> <strong>{localStorage.getItem('solde.value')}</strong> </h2>
       </div>
       <div className="center-items">
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -23,20 +21,18 @@ function Header() {
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
               <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                 <li className="nav-item">
-                  <a className="nav-link active" aria-current="page" href="#">Tous</a>
+                <Link className="nav-link" to="/"><p>Tous</p></Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#">Dépenses</a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="#">Ajouts</a>
+                <Link className="nav-link" to="/Solde"><p>Entrer un nouveau solde</p></Link>
                 </li>
               </ul>
             </div>
           </div>
         </nav>
+        <Outlet />
       </div>
-
+      
     </header>
   );
 };

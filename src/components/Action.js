@@ -3,7 +3,7 @@ import { useState } from 'react';
 
 export default function Action({ initialCalcul }, { initialNombre}) {
     const [calcul, setCalcul] = useState(initialCalcul);
-    let nombre= useState(localStorage.getItem('montant'));
+    let nombre= useState(localStorage.getItem('solde.value'));
     let [resultat, setResultat] = useState(0);
     return (
         <>
